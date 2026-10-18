@@ -1,0 +1,24 @@
+[submodule "components/esp-mt6701"]
+	path = components/esp-mt6701
+	url = https://github.com/smartsensingme/esp-mt6701.git
+[submodule "components/esp_2wd_robot"]
+	path = components/esp_2wd_robot
+	url = https://github.com/smartsensingme/esp_2wd_robot.git
+[submodule "components/esp_angle_lut"]
+	path = components/esp_angle_lut
+	url = https://github.com/smartsensingme/esp_angle_lut.git
+[submodule "components/esp_drv8833"]
+	path = components/esp_drv8833
+	url = https://github.com/smartsensingme/esp_drv8833.git
+[submodule "components/esp_pid"]
+	path = components/esp_pid
+	url = https://github.com/smartsensingme/esp_pid.git
+[submodule "components/esp_rt_diagnostics"]
+	path = components/esp_rt_diagnostics
+	url = https://github.com/smartsensingme/esp_rt_diagnostics.git
+[submodule "components/esp_rt_diagnostics_reporter"]
+	path = components/esp_rt_diagnostics_reporter
+	url = https://github.com/smartsensingme/esp_rt_diagnostics_reporter.git
+[submodule "components/kalman"]
+	path = components/kalman
+	url = https://github.com/smartsensingme/kalman.git

@@ -1,0 +1,33 @@
+Cores dos cabos
+----------------
+SDA - Verde
+SCL - Cinza
+VDD - Branco
+GND - Preto
+
+MT6701
+------
+
+SDA (Sensor 1 e 2) - ESP32 GPIO8 (Lateral direita)
+SCL (Sensor 1 e 2) - ESP32 GPIO9 (Lateral direita)
+VDD (Sensor 1 e 2) - ESP32 3V3 (Lateral esquerda.)
+GND (Sensor 1 e 2) - ESP32 GND (Lateral esquerda)
+
+DRV8833
+-------
+
+Digital
+-------
+IN1 (Motor 1) - ESP32 GPIO0 (Lateral esquerda)
+IN2 (Motor 1) - ESP32 GPIO1 (Lateral esquerda)
+IN3 (Motor 2) - ESP32 GPIO2 (Lateral esquerda)
+IN4 (Motor 2) - ESP32 GPIO3 (Lateral esquerda)
+EEP (Sleep) - ESP32 GPIO10 (Lateral direita. Nível ALTO ativa, BAIXO desativa)
+ULT (Fault) - ESP32 GPIO7 (Lateral direita. Configure como entrada com pull-up interno no código. Se for a nível BAIXO, houve falha térmica/curto)
+
+Potência
+--------
+DRV8833 VCC - Positivo da Bateria/Fonte Externa.
+DRV8833 GND - ESP32 GND E Negativo da Bateria/Fonte.
+OUT1 e OUT2 - Fios do Motor 1
+OUT3 e OUT4 - Fios do Motor 2

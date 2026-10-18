@@ -1,0 +1,15 @@
+.DS_Store
+build/
+managed_components/
+sdkconfig
+sdkconfig.old
+
+# Local editor/cache and measurements (never remove existing captures)
+.cache/
+.vscode/
+__pycache__/
+*.pyc
+*.mat
+
+# Derived reports from local evaluation captures
+/tests/*_report/

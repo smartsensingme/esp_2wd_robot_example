@@ -1,0 +1,42 @@
+menu "Robot application"
+config ROBOT_CALIBRATION_GPIO
+    int "Calibration button GPIO (active LOW, internal pull-up)"
+    range 0 21
+    default 5
+    help
+        Connect a normally-open button between this GPIO and GND. A stable LOW
+        requests maintenance mode without reset. Enabling the integration creates
+        one priority-1 polling task (2048-byte stack); no GPIO ISR is installed.
+        Board integration accepts only
+        unused exposed GPIOs 4, 5, 6, 20 or 21; occupied pins fail initialization.
+
+config ROBOT_CALIBRATION_DEBOUNCE_MS
+    int "Calibration button stable interval (ms)"
+    range 20 1000
+    default 50
+    help
+        Both LOW acceptance and HIGH rearming require this stable interval.
+        Input polling occurs every 10 ms in a low-priority task; scheduling can
+        add latency. Mode entry waits for any active controller to stop/join.
+
+config ROBOT_CALIBRATION_LED_GPIO
+    int "Optional calibration LED GPIO (-1 disables)"
+    range -1 21
+    default -1
+    help
+        Optional external LED, toggled every 250 ms while maintenance is active.
+        Use a free GPIO (4, 5, 6, 20 or 21), different from the button, with a
+        series resistor. The onboard GPIO8 LED shares encoder SDA and cannot
+        be blinked in this integration. Default disabled adds no output pin.
+
+config ROBOT_CALIBRATION_LED_ACTIVE_LEVEL
+    int "LED active level (0 or 1)"
+    range 0 1
+    default 1
+    help
+        Electrical level that lights the optional external LED. The opposite
+        level is applied during setup and while normal mode is active. This
+        setting has no GPIO effect when the LED GPIO is -1; it does not permit
+        using the onboard LED on the encoder SDA pin.
+
+endmenu
